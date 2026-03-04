@@ -7,6 +7,7 @@ import time
 from supabase import create_client, Client
 import io
 from dotenv import load_dotenv
+import os
 
 app = FastAPI()
 
