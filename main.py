@@ -19,8 +19,8 @@ app.add_middleware(
 # ---------------------------------------------------------
 # ATENÇÃO: COLOQUE AS SUAS CHAVES DO SUPABASE AQUI
 # ---------------------------------------------------------
-URL_SUPABASE = "COLE_SUA_PROJECT_URL_AQUI"
-CHAVE_SUPABASE = "COLE_SUA_API_KEY_AQUI"
+URL_SUPABASE = "https://amdsexfmtwqgdihlyqti.supabase.co"
+CHAVE_SUPABASE = "sb_publishable_xisIAK-FwYMFXirHON0GqA_XCQrp6St"
 
 supabase: Client = create_client(URL_SUPABASE, CHAVE_SUPABASE)
 geolocator = Nominatim(user_agent="app_pdv_tracker_v1")
