@@ -5,3 +5,4 @@ openpyxl
 geopy
 python-multipart
 supabase
+googlemaps
