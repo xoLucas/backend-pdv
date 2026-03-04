@@ -7,4 +7,3 @@ python-multipart
 supabase
 googlemaps
 python-dotenv
-python-multipart
