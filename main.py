@@ -20,9 +20,9 @@ app.add_middleware(
 # ---------------------------------------------------------
 # CONFIGURAÇÕES DE API
 # ---------------------------------------------------------
-URL_SUPABASE = "https://amdsexfmtwqgdihlyqti.supabase.co"
-CHAVE_SUPABASE = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFtZHNleGZtdHdxZ2RpaGx5cXRpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MzY2OTksImV4cCI6MjA4ODIxMjY5OX0.EAybwVPJzFFHzd6LQe_zUAJ96ZzdVh5tjjVLbnYgHgA"
-GOOGLE_MAPS_API_KEY = "AIzaSyBhybZVLHkLFfysI3bTa76IbBtxvA3EheE"
+URL_SUPABASE = Supabase_URL
+CHAVE_SUPABASE = Supabase_Key
+GOOGLE_MAPS_API_KEY = Maps_API_KEY
 
 supabase: Client = create_client(URL_SUPABASE, CHAVE_SUPABASE)
 geolocator = Nominatim(user_agent="app_pdv_tracker_v3")
