@@ -6,6 +6,7 @@ import googlemaps
 import time
 from supabase import create_client, Client
 import io
+from dotenv import load_dotenv
 
 app = FastAPI()
 
@@ -20,9 +21,12 @@ app.add_middleware(
 # ---------------------------------------------------------
 # CONFIGURAÇÕES DE API
 # ---------------------------------------------------------
-URL_SUPABASE = Supabase_URL
-CHAVE_SUPABASE = Supabase_Key
-GOOGLE_MAPS_API_KEY = Maps_API_KEY
+# Carrega o arquivo específico que você criou
+load_dotenv("api-pdv-tracker.env") 
+
+URL_SUPABASE = os.getenv("Supabase_URL")
+CHAVE_SUPABASE = os.getenv("Supabase_Key")
+GOOGLE_MAPS_API_KEY = os.getenv("Maps_API_KEY")
 
 supabase: Client = create_client(URL_SUPABASE, CHAVE_SUPABASE)
 geolocator = Nominatim(user_agent="app_pdv_tracker_v3")
@@ -37,8 +41,7 @@ def limpar_endereco(endereco):
     if not endereco: return ""
     # Remove o '\n' que aparece no final de alguns endereços na sua planilha
     endereco_limpo = str(endereco).replace('\n', ' ').strip()
-    # Adiciona contexto para o buscador não se perder fora de Linhares/ES
-    return f"{endereco_limpo}, Linhares, ES, Brasil"
+    return endereco_limpo
 
 def buscar_coordenadas(endereco_original):
     """ Tenta Nominatim (Grátis) -> Se falhar -> Google (Pago/Cota) """
