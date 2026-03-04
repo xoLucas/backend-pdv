@@ -20,7 +20,7 @@ app.add_middleware(
 # ATENÇÃO: COLOQUE AS SUAS CHAVES DO SUPABASE AQUI
 # ---------------------------------------------------------
 URL_SUPABASE = "https://amdsexfmtwqgdihlyqti.supabase.co"
-CHAVE_SUPABASE = "sb_publishable_xisIAK-FwYMFXirHON0GqA_XCQrp6St"
+CHAVE_SUPABASE = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFtZHNleGZtdHdxZ2RpaGx5cXRpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MzY2OTksImV4cCI6MjA4ODIxMjY5OX0.EAybwVPJzFFHzd6LQe_zUAJ96ZzdVh5tjjVLbnYgHgA"
 
 supabase: Client = create_client(URL_SUPABASE, CHAVE_SUPABASE)
 geolocator = Nominatim(user_agent="app_pdv_tracker_v3")
